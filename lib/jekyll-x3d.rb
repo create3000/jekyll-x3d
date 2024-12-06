@@ -10,7 +10,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
   require "rouge"
 
   # This class defines the X3D lexer which is used to highlight "x3d" code snippets during render-time
-  class X3D < Rouge::Lexers::XML
+  class X3D < Rouge::RegexLexer
     title "X3D"
     desc "X3D XML Encoding"
 
@@ -58,6 +58,23 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r(<\s*/\s*[\p{L}:_][\p{Word}\p{Cf}:.·-]*\s*>)m, Name::Tag
     end
 
+    state :comment do
+      rule %r/[^-]+/m, Comment
+      rule %r/-->/, Comment, :pop!
+      rule %r/-/, Comment
+    end
+
+    state :tag do
+      rule %r/\s+/m, Text
+      rule %r/[\p{L}:_][\p{Word}\p{Cf}:.·-]*\s*=/m, Name::Attribute, :attr
+      rule %r(/?\s*>), Name::Tag, :pop!
+    end
+
+    state :attr do
+      rule %r/\s+/m, Text
+      rule %r/".*?"|'.*?'|[^\s>]+/m, Str, :pop!
+    end
+
     state :ecmascript do
       rule %r/[^\]]+/ do
         delegate @javascript
@@ -81,6 +98,5 @@ Jekyll::Hooks.register :site, :pre_render do |site|
         delegate @glsl
       end
     end
-
   end
 end

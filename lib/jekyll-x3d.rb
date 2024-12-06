@@ -15,13 +15,12 @@ Jekyll::Hooks.register :site, :pre_render do |site|
     desc "X3D XML Encoding"
 
     tag "x3d"
-    aliases "x3d"
     filenames "*.x3d"
 
     mimetypes "model/x3d+xml"
 
     def self.detect?(text)
-      return false if text.doctype?(/X3D/)
+      return true if text.doctype?(/X3D/)
       return true if text =~ /<X3D\b/
     end
 

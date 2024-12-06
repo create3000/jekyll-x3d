@@ -1,0 +1,9 @@
+{
+  "name": "jekyll-x3d",
+  "scripts": {
+    "prebuild": "rm -f ./*.gem",
+    "build": "gem build jekyll-x3d.gemspec",
+    "try": "sudo gem install ./*.gem",
+    "publish": "gem push ./*.gem"
+  }
+}

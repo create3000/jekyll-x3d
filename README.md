@@ -1,6 +1,6 @@
 # jekyll-x3d
 
-Adds support for X3D syntax highlighting to Jekyll. This allows developers to easily integrate and display X3D content within their Jekyll-powered websites.
+Adds support for X3D syntax highlighting to Jekyll. This allows developers to easily integrate and display X3D content within their Jekyll-powered websites. The advantage over XML highlighting is that the contents of script nodes and shader nodes are also highlighted.
 
 ## Usage
 

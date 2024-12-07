@@ -39,5 +39,6 @@ function initialize ()
 
 ## See Also
 
+* [jekyll-vrml](https://github.com/create3000/jekyll-vrml)
 * [X_ITE X3D Browser](https://create3000.github.io/x_ite/)
 * [web3d.org](https://www.web3d.org)

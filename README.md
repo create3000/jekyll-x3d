@@ -25,7 +25,7 @@ Now you can highlight your source code in Markdown as X3D:
 
 ``````md
 ```x3d
-<Script>
+<Script DEF='Example'>
 <![CDATA[ecmascript:
 // foo
 function initialize ()

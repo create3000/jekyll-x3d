@@ -4,6 +4,9 @@
 require_relative "jekyll-x3d/version"
 require "jekyll"
 
+# Taken from
+# https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/lexers/xml.rb
+
 # This "hook" is executed right before the site"s pages are rendered
 Jekyll::Hooks.register :site, :pre_render do |site|
   # puts "Adding X3D Markdown Lexer ..."

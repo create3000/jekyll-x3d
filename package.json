@@ -1,5 +1,6 @@
 {
   "name": "jekyll-x3d",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rm -f ./*.gem",
     "build": "gem build jekyll-x3d.gemspec",

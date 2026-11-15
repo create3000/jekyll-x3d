@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["holger.seelig@gmail.com"]
 
   spec.summary = "X3D Syntax Highlighter"
-  spec.description = "Adds support for X3D syntax highlighting to Jekyll. Enables automatic highlighting of X3D XML code blocks in documentation and blog posts, making 3D scene descriptions easier to read and understand. Supports syntax highlighting for embeded script and shader nodes."
+  spec.description = "Adds support for X3D syntax highlighting to Jekyll. Enables automatic highlighting of X3D XML code blocks in documentation and blog posts, making 3D scene descriptions easier to read and understand. Supports syntax highlighting for embedded script and shader nodes."
   spec.homepage = "https://github.com/create3000/jekyll-x3d/blob/main/README.md"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.0.0"

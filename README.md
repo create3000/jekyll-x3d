@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-x3d.svg?icon=si%3Arubygems)](https://badge.fury.io/rb/jekyll-x3d)
 
-Adds support for X3D syntax highlighting to Jekyll, which developers to integrate and display X3D content within their Jekyll websites. The advantage over XML highlighting is that the contents of Script nodes and shader nodes are also highlighted.
+Adds support for X3D syntax highlighting to Jekyll. Enables automatic highlighting of X3D XML code blocks in documentation and blog posts, making 3D scene descriptions easier to read and understand. Supports syntax highlighting for embedded script and shader nodes.
 
 ## Usage
 
